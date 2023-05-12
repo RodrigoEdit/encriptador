@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Outfit:wght@300&display=swap');
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+main{
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.formulario{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.img-logo{
+    align-self: flex-start;
+    width: 30px;
+    padding: 20px;
+}
+.formulario textarea{
+    width: 50%;
+    height: 50%;
+    margin: 5px auto 30px;
+    border: none;
+    box-shadow: 1px 1px 6px 1px #b8b3b3;
+    border-radius: 20px;
+    resize: none;
+    padding: 30px;
+    font-size: 20px;
+}
+.formulario label{
+    width: 50%;
+    font-size: 13px;
+    margin: 5px auto;
+    
+}
+.botones{
+    padding: 10px;
+}
+.encriptar{
+    background: darkblue;
+    border: darkblue 1px solid;
+    color: white;
+    margin: 0px 20px;
+    padding: 10px 70px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.noencriptar{
+    background: #E5E5E5;
+    color: darkblue;
+    margin: 0px 20px;
+    padding: 10px 70px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border: darkblue 1px solid;
+}
+.formulario textarea::placeholder{
+    color: darkblue;
+}
+.formulario textarea:focus ,.formulario-respuesta textarea  {
+    outline: none;
+}
+
+
+
+
+
+.formulario-respuesta{
+    width:30%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+/* SI HAY MENSAJE */
+#elementos-ocultos{
+    width:100%;
+    border-radius: 10px;
+    padding: 5px;
+    height: 100%;
+    box-shadow: 1px 1px 6px 1px #b8b3b3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#elementos-ocultos #respuesta-text-area{
+    margin: 25px auto;
+    width: 80%;
+    height: 80%;
+    border: none;
+    resize: none;
+    font-size: 20px;
+}
+
+.boton-copiar a{
+    background: #ffffff;
+    color: darkblue;
+    margin: 0px 20px;
+    padding: 10px 70px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border: darkblue 1px solid;
+
+}
+
+
+/* NO HAY MENSAJE */
+#elementos-mostrados{
+    width:100%;
+    border-radius: 10px;
+    padding: 5px;
+    height: 100%;
+    box-shadow: 1px 1px 6px 1px #b8b3b3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+#elementos-mostrados img{
+    width: 300px;
+    margin: 90px auto 0px;
+    
+}
+#elementos-mostrados h3{
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+    font-weight: bolder;
+    
+    
+}
+#elementos-mostrados h5{
+    text-align: center;
+    color: grey;
+    
+}
+
+@media screen and (max-width: 900px){
+    
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #elementos-mostrados img{
+        display: none;
+    }
+    .formulario{
+        width:100%;
+        
+    }
+    .formulario textarea{
+        width: 70%;
+    }
+    .formulario label{
+        width: 60%;
+        
+    }
+    html,
+    body,
+    main {
+        height: auto;
+    }
+    /* formulario */
+    .formulario-respuesta{
+        width: 80%;
+        height: auto;
+    }
+    /* elementos ocultos */
+    #elementos-ocultos {
+        height: 200px;
+    }
+
+    #elementos-ocultos #respuesta-text-area{
+        width: 95%;
+        margin: 10px 5px 30px;
+    }
+    /* elementos vistos error */
+    #elementos-mostrados{
+        height: auto;
+    }
+    #elementos-mostrados h3{
+        font-size: 25px;
+    }
+    .boton-copiar{
+        display: inline-block;
+        height: 50px;
+    }
+    .boton-copiar a{
+        padding: 10px 180px;
+    }
+}
+
+@media screen and (max-width: 546px){
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar horizontalmente */
+        justify-content: center;
+    }
+    
+    .encriptar, .noencriptar {
+        text-align: center;
+        width: 100%;
+        margin: 10px 0px;
+        padding: 20px 60px;
+    }
+    .boton-copiar a{
+        padding: 10px 100px;
+    }
+    #elementos-ocultos {
+        height: 300px;
+    }
+}
